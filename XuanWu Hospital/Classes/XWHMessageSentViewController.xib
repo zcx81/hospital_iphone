@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C94b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XWHMessageSentViewController">
+            <connections>
+                <outlet property="bottomView" destination="2wi-eI-rjE" id="T1W-GI-u6c"/>
+                <outlet property="mTableView" destination="q0k-rR-JTP" id="Fik-4x-agb"/>
+                <outlet property="tableViewBottomConstraint" destination="In2-Lz-Yep" id="JwE-KC-GnB"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="q0k-rR-JTP">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="560"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="mOC-F4-zym"/>
+                        <outlet property="delegate" destination="-1" id="cs4-0c-tcE"/>
+                    </connections>
+                </tableView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2wi-eI-rjE" userLabel="bottomView">
+                    <rect key="frame" x="0.0" y="483" width="320" height="30"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p0W-jG-0fs">
+                            <rect key="frame" x="38" y="0.0" width="46" height="30"/>
+                            <state key="normal" title="取消">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="cancelAction:" destination="-1" eventType="touchUpInside" id="7ky-75-Mk9"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qbp-p6-aii">
+                            <rect key="frame" x="230" y="0.0" width="46" height="30"/>
+                            <state key="normal" title="确定">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="confirmAction:" destination="-1" eventType="touchUpInside" id="ihb-Yb-z3T"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="320" id="ZbH-FF-xry"/>
+                        <constraint firstAttribute="height" constant="30" id="xm1-Hg-WRF"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="2wi-eI-rjE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1LZ-kV-kFw"/>
+                <constraint firstItem="q0k-rR-JTP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="HgW-di-DgX"/>
+                <constraint firstAttribute="bottom" secondItem="q0k-rR-JTP" secondAttribute="bottom" constant="8" id="In2-Lz-Yep"/>
+                <constraint firstAttribute="trailing" secondItem="2wi-eI-rjE" secondAttribute="trailing" id="X7t-vx-yBl"/>
+                <constraint firstAttribute="trailing" secondItem="q0k-rR-JTP" secondAttribute="trailing" id="gSc-ps-VfS"/>
+                <constraint firstAttribute="bottom" secondItem="2wi-eI-rjE" secondAttribute="bottom" constant="55" id="l4T-as-2PB"/>
+                <constraint firstItem="q0k-rR-JTP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="yLe-Cp-2eW"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C94b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="XWHPiShiView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="213"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="本人批示：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dK1-Os-tVy">
+                    <rect key="frame" x="8" y="8" width="65" height="10"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABw-AP-0xD">
+                    <rect key="frame" x="140" y="6" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="Y2D-A7-uY9"/>
+                        <constraint firstAttribute="height" constant="20" id="zIb-XN-jbb"/>
+                    </constraints>
+                    <state key="normal" image="workflow_pishi_normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="workflow_pishi_selected"/>
+                    <connections>
+                        <action selector="disAgreeBtnAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="PCO-wC-1NG"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UzV-q8-FYO">
+                    <rect key="frame" x="76" y="6" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="5cQ-8l-Hfk"/>
+                        <constraint firstAttribute="height" constant="20" id="mot-GN-FMQ"/>
+                    </constraints>
+                    <state key="normal" image="workflow_pishi_normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="workflow_pishi_selected"/>
+                    <connections>
+                        <action selector="agreeBtnAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="bWs-UZ-klX"/>
+                    </connections>
+                </button>
+                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="同意" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nx-qt-sVE">
+                    <rect key="frame" x="104" y="8" width="28" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="不同意" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XSN-Ua-1vO">
+                    <rect key="frame" x="169" y="8" width="42" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VjI-Na-QKX" customClass="LPlaceholderTextView">
+                    <rect key="frame" x="8" y="28" width="304" height="149"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Oe-Br-ZpD">
+                    <rect key="frame" x="170" y="185" width="50" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="lVD-9E-3mC"/>
+                        <constraint firstAttribute="width" constant="50" id="wGi-ei-EMY"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="提交">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="submitAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="0zt-y2-oTZ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFE-bN-ho4">
+                    <rect key="frame" x="247" y="185" width="50" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="h0O-Fl-pA1"/>
+                        <constraint firstAttribute="height" constant="20" id="mso-aM-6sb"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="返回">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="backAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="xTS-0u-uqD"/>
+                    </connections>
+                </button>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RPf-iM-zz4">
+                    <rect key="frame" x="8" y="28" width="304" height="30"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="备注:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dv7-Qe-PSd">
+                            <rect key="frame" x="2" y="9" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p2d-ac-h2y">
+                            <rect key="frame" x="34" y="0.0" width="30" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="月" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzT-gt-EQC">
+                            <rect key="frame" x="64" y="9" width="15" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Whp-Uu-TTs">
+                            <rect key="frame" x="79" y="0.0" width="29" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="日到人事处" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wPT-76-UrL">
+                            <rect key="frame" x="109" y="9" width="68" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ouz-4E-DvS">
+                            <rect key="frame" x="176" y="0.0" width="46" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="房间办理手续" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTU-VN-cJi">
+                            <rect key="frame" x="223" y="9" width="79" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="tVJ-Ry-cSS"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="jFE-bN-ho4" firstAttribute="top" secondItem="VjI-Na-QKX" secondAttribute="bottom" constant="8" id="3jH-6f-FtL"/>
+                <constraint firstItem="VjI-Na-QKX" firstAttribute="top" secondItem="UzV-q8-FYO" secondAttribute="bottom" constant="2" id="5zd-74-gQ5"/>
+                <constraint firstItem="ABw-AP-0xD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="6" id="6FE-Kg-4V4"/>
+                <constraint firstItem="RPf-iM-zz4" firstAttribute="top" secondItem="UzV-q8-FYO" secondAttribute="bottom" constant="2" id="AaA-E1-d4f"/>
+                <constraint firstItem="jFE-bN-ho4" firstAttribute="leading" secondItem="0Oe-Br-ZpD" secondAttribute="trailing" constant="27" id="B9w-b0-YSm"/>
+                <constraint firstItem="UzV-q8-FYO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="6" id="Bml-Up-hLP"/>
+                <constraint firstAttribute="bottom" secondItem="jFE-bN-ho4" secondAttribute="bottom" constant="8" id="ESz-C5-Edt"/>
+                <constraint firstItem="XSN-Ua-1vO" firstAttribute="leading" secondItem="ABw-AP-0xD" secondAttribute="trailing" constant="9" id="KKM-VD-tOj"/>
+                <constraint firstAttribute="trailing" secondItem="VjI-Na-QKX" secondAttribute="trailing" constant="8" id="MYn-eD-zUX"/>
+                <constraint firstAttribute="bottom" secondItem="0Oe-Br-ZpD" secondAttribute="bottom" constant="8" id="MZT-J5-ia2"/>
+                <constraint firstItem="dK1-Os-tVy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="Soj-h4-BC6"/>
+                <constraint firstItem="0Oe-Br-ZpD" firstAttribute="bottom" secondItem="jFE-bN-ho4" secondAttribute="bottom" id="YBc-Mj-bTx"/>
+                <constraint firstAttribute="trailing" secondItem="jFE-bN-ho4" secondAttribute="trailing" constant="23" id="Zqh-3h-gbz"/>
+                <constraint firstItem="RPf-iM-zz4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="cbU-9B-l1d"/>
+                <constraint firstAttribute="trailing" secondItem="RPf-iM-zz4" secondAttribute="trailing" constant="8" id="cjs-uf-tpj"/>
+                <constraint firstItem="1nx-qt-sVE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="gsZ-V9-SIg"/>
+                <constraint firstItem="XSN-Ua-1vO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="hgS-xu-fkW"/>
+                <constraint firstItem="ABw-AP-0xD" firstAttribute="leading" secondItem="1nx-qt-sVE" secondAttribute="trailing" constant="8" id="jNO-7Q-ynn"/>
+                <constraint firstItem="dK1-Os-tVy" firstAttribute="centerY" secondItem="UzV-q8-FYO" secondAttribute="centerY" constant="-3" id="l29-dw-j1q"/>
+                <constraint firstItem="VjI-Na-QKX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="lo1-4C-IaC"/>
+                <constraint firstItem="1nx-qt-sVE" firstAttribute="leading" secondItem="UzV-q8-FYO" secondAttribute="trailing" constant="8" id="vQg-iC-xge"/>
+                <constraint firstItem="UzV-q8-FYO" firstAttribute="leading" secondItem="dK1-Os-tVy" secondAttribute="trailing" constant="3" id="wUy-xh-hkH"/>
+                <constraint firstItem="dK1-Os-tVy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="yL5-3W-sjV"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="agreeBtn" destination="UzV-q8-FYO" id="6bw-Ev-gVs"/>
+                <outlet property="agreeLabel" destination="1nx-qt-sVE" id="uwY-HF-Ub9"/>
+                <outlet property="backBtn" destination="jFE-bN-ho4" id="NIK-ih-o6k"/>
+                <outlet property="dateView" destination="RPf-iM-zz4" id="GCw-91-hoy"/>
+                <outlet property="dayTextField" destination="Whp-Uu-TTs" id="fQd-Do-VtI"/>
+                <outlet property="disAgreeBtn" destination="ABw-AP-0xD" id="ix7-Mt-sSc"/>
+                <outlet property="disagreeLabel" destination="XSN-Ua-1vO" id="fu8-B9-asF"/>
+                <outlet property="monthTextField" destination="p2d-ac-h2y" id="GYr-cM-Pj0"/>
+                <outlet property="numberTextField" destination="ouz-4E-DvS" id="kZr-gS-i0o"/>
+                <outlet property="submitBtn" destination="0Oe-Br-ZpD" id="is4-hq-VtC"/>
+                <outlet property="textView" destination="VjI-Na-QKX" id="cZX-xT-tr7"/>
+                <outlet property="textViewTopConstraint" destination="5zd-74-gQ5" id="RpB-ct-rds"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="workflow_pishi_normal" width="20" height="20"/>
+        <image name="workflow_pishi_selected" width="20" height="20"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

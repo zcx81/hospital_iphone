@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C81f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="XWHDatePickerView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rf3-zk-e6g">
+                    <rect key="frame" x="0.0" y="308" width="320" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="4NA-qe-DAd"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="Biy-mx-wav"/>
+                    </constraints>
+                    <items>
+                        <barButtonItem title="取消" id="mHj-pH-2Xe">
+                            <connections>
+                                <action selector="cancelAction:" destination="iN0-l3-epB" id="4de-Im-xWg"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="qsr-iw-BhQ"/>
+                        <barButtonItem title="完成" id="GZQ-f8-AcN">
+                            <connections>
+                                <action selector="acrionDone:" destination="iN0-l3-epB" id="4Xa-FU-C5v"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Biy-mx-wav"/>
+                        </mask>
+                    </variation>
+                </toolbar>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EHA-Bh-Pha">
+                    <rect key="frame" x="0.0" y="352" width="320" height="216"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="216" id="4Og-oO-jnS"/>
+                        <constraint firstAttribute="height" constant="216" id="K4B-e2-3ih"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="ovD-vK-UH3"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="Q8U-4G-q1X"/>
+                    </connections>
+                </pickerView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="rf3-zk-e6g" secondAttribute="trailing" id="ANN-2c-Sxh"/>
+                <constraint firstItem="EHA-Bh-Pha" firstAttribute="top" secondItem="rf3-zk-e6g" secondAttribute="bottom" id="KSf-IF-5FV"/>
+                <constraint firstItem="EHA-Bh-Pha" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Zhl-s6-OdC"/>
+                <constraint firstAttribute="bottom" secondItem="EHA-Bh-Pha" secondAttribute="bottom" id="oyS-y2-fwh"/>
+                <constraint firstItem="rf3-zk-e6g" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ugo-zF-WmN"/>
+                <constraint firstAttribute="trailing" secondItem="EHA-Bh-Pha" secondAttribute="trailing" id="wuW-5G-bs8"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <connections>
+                <outlet property="pickerView" destination="EHA-Bh-Pha" id="5nS-Ni-mbD"/>
+            </connections>
+        </view>
+    </objects>
+</document>
